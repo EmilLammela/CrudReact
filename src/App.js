@@ -1,25 +1,43 @@
-import logo from './logo.svg';
+import React, { useState, useRef } from 'react';
+import MenuIcon from './images/icon50.png';
 import './App.css';
+import './content.css'
+import Content from './content';
 
-function App() {
+export default function ExampleCss() {
+  const [content, setContent] = useState('Initial Content');
+  const wrapperRef = useRef();
+
+  const handleClick = () => {
+    const wrapper = wrapperRef.current;
+    wrapper.classList.toggle('is-nav-open');
+  };
+
+  const updateContent = (newContent) => {
+    setContent(newContent);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main">
+      <div ref={wrapperRef} className="wrapper">
+        <div className="nav">
+          <img
+            src={MenuIcon}
+            alt="Menu Icon"
+            className="nav_icon"
+            onClick={handleClick}
+          />
+          <div className="nav_body">
+            <Content updateContent={updateContent} />
+          </div>
+        </div>
+      </div>
+
+      <div className="content"> 
+        <h1>Container 1</h1>
+        <div id="container1">{content}</div>
+        
+      </div>
     </div>
   );
 }
-
-export default App;

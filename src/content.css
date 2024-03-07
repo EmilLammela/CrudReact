@@ -1,0 +1,55 @@
+.sisaltoDiv {
+    height: 400px;
+    width: 100%;
+    background-color: antiquewhite;
+
+    display: flex;
+    align-items: center;
+}
+  
+.kuvaDiv {
+    flex: 1;
+    width: 50%;
+    overflow: hidden;
+
+    border: 1px solid green;
+}
+  
+.tekstiDiv {
+    flex: 1;
+    width: 50%;
+    overflow: hidden;
+
+    border: 1px solid red;
+}
+  
+.kuva1 {
+    min-height: 250px;
+    max-height: 250px;
+}
+  
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+.button-container button {
+    margin-top: 20px;
+}
+
+.button-container button {
+    border-radius: 12px;
+    border: none;
+
+    text-align: center;
+    text-decoration: none;
+
+    display: inline-block;
+
+    font-size: 10px;
+    cursor: pointer;
+    
+    padding: 10px;
+
+}
