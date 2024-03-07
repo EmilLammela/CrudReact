@@ -5,7 +5,13 @@ import './content.css';
 import Content from './content';
 
 export default function ExampleCss() {
-  const [content, setContent] = useState('Initial Content');
+  const [content, setContent] = useState(
+    <div>
+
+      <p>This is <strong>initial</strong> content.</p>
+    
+    </div>
+  );
   const wrapperRef = useRef();
 
   const handleClick = () => {

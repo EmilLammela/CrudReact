@@ -1,7 +1,9 @@
+
+
 .main {
   background-color: lightblue;
   min-height: 100vh;
-  min-width: 100vh;
+  min-width: 100vw;
   position: relative;
 }
 
@@ -9,8 +11,8 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  left: -250px;
-  width: 250px;
+  left: -150px;
+  width: 150px;
   transition: left 0.5s;
   background-color: white;
 }
