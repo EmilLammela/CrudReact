@@ -1,7 +1,7 @@
 {
   "name": "harjoitus",
-  "version": "0.1.0",
-  "homepage": "https://47012.github.io/reactharjoitus",
+  "version": "0.1.1",
+  "homepage": "./",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
