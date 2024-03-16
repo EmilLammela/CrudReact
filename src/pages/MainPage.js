@@ -1,8 +1,8 @@
 import React, { useState, useRef } from 'react';
-import MenuIcon from './images/icon50.png';
-import './App.css';
-import './content.css';
-import Content from './content';
+import MenuIcon from '../images/icon50.png';
+import '../css/App.css';
+import '../css/content.css';
+import Content from '../pages/content';
 
 export default function ExampleCss() {
   const [content, setContent] = useState(

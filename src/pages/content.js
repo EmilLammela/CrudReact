@@ -1,6 +1,6 @@
 import React from 'react';
-import kuva1 from './images/man.jpg';
-import './content.css';
+import kuva1 from '../images/man.jpg';
+import '../css/content.css';
 
 function Content({ updateContent }) {
   const handleButtonClick = (newContent) => {
