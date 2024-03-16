@@ -1,6 +1,7 @@
 import React from 'react';
 import kuva1 from '../images/man.jpg';
 import '../css/content.css';
+import DataSearch from '../pages/data_search.js'
 
 function Content({ updateContent }) {
   const handleButtonClick = (newContent) => {
@@ -44,6 +45,15 @@ function Content({ updateContent }) {
           </div>
         )}>
           Etusivu
+        </button>
+
+
+        <button className="button" onClick={() => handleButtonClick(
+          <div>
+            {<DataSearch />}
+          </div>
+        )}>
+          Data Search
         </button>
 
       </div>
