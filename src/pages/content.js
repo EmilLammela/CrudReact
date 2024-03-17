@@ -1,7 +1,9 @@
 import React from 'react';
-import kuva1 from '../images/man.jpg';
 import '../css/content.css';
-import DataSearch from '../pages/data_search.js'
+import DataSearch from '../pages/data_search.js';
+import ToDoList from '../pages/to_do_list.js';
+import Profile from '../pages/profile.js';
+import MainContent from './main_content.js';
 
 function Content({ updateContent }) {
   const handleButtonClick = (newContent) => {
@@ -12,39 +14,29 @@ function Content({ updateContent }) {
     <div>
       {/* Buttons to change the content */}
       <div className="button-container">
+
         <button className="button" onClick={() => handleButtonClick(
-          <div className="sisaltoDiv">
-            <div className="tekstiDiv">
-              <p>
-                Henkilö X
-              </p>
-            </div>
-            <div className="kuvaDiv">
-              <img
-                className="kuva1"
-                src={kuva1}
-                alt="Henkilö X"
-              />
-            </div>
+          <div>
+            {<MainContent />}
           </div>
         )}>
-          Meistä
+          HomePage
         </button>
 
         <button className="button" onClick={() => handleButtonClick(
           <div>
-            <p>This is the content for Yhteystiedot.</p>
+            {<Profile />}
           </div>
         )}>
-          Yhteystiedot
+          Profile
         </button>
 
         <button className="button" onClick={() => handleButtonClick(
           <div>
-            <p>Main contect.</p>
+            {<ToDoList />}
           </div>
         )}>
-          Etusivu
+          To Do List
         </button>
 
 
@@ -54,6 +46,15 @@ function Content({ updateContent }) {
           </div>
         )}>
           Data Search
+        </button>
+
+
+        <button className="button" onClick={() => handleButtonClick(
+          <div>
+            <p>This is the content for Yhteystiedot.</p>
+          </div>
+        )}>
+          Contacts
         </button>
 
       </div>

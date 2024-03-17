@@ -1,0 +1,28 @@
+
+
+.content_container {
+    display: flex;
+    justify-content: center;
+}
+  
+.box {
+
+    margin: 5px; /* Adjust spacing */
+    border: 1px solid black;
+}
+#div{
+    width: 100px; /* Adjust as needed */
+    height: 100px; /* Adjust as needed */
+}
+
+#left{
+   width: 200px;
+   height: 200px;
+   border: 1px solid red;
+}
+
+#right{
+    width: 200px;
+    height: 200px; 
+    border: 1px solid green;
+}

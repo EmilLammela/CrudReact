@@ -1,15 +1,13 @@
 import React, { useState, useRef } from 'react';
 import MenuIcon from '../images/icon50.png';
 import '../css/App.css';
-import '../css/content.css';
 import Content from '../pages/content';
+import MainContent from '../pages/main_content'
 
 export default function ExampleCss() {
   const [content, setContent] = useState(
     <div>
-
-      <p>This is <strong>initial</strong> content.</p>
-    
+      {<MainContent />}
     </div>
   );
   const wrapperRef = useRef();
