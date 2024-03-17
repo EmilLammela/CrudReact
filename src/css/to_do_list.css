@@ -1,4 +1,14 @@
 
+.labels {
+    display: flex;
+    justify-content: center;
+}
+  
+.label {
+    margin: 5px;
+    border: 1px solid black;
+    width: 100px;
+}
 
 .content_container {
     display: flex;
@@ -6,23 +16,17 @@
 }
   
 .box {
-
     margin: 5px; /* Adjust spacing */
     border: 1px solid black;
-}
-#div{
     width: 100px; /* Adjust as needed */
     height: 100px; /* Adjust as needed */
 }
 
+
 #left{
-   width: 200px;
-   height: 200px;
-   border: 1px solid red;
+   border: 3px solid red;
 }
 
 #right{
-    width: 200px;
-    height: 200px; 
-    border: 1px solid green;
+    border: 3px solid green;
 }
