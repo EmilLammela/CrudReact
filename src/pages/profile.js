@@ -4,31 +4,21 @@ import '../css/profile.css';
 import firebase from '../firebaseConfig';
 import TaskEditor from '../pages/task_editor'; // Import TaskEditor component
 
-if (!firebase.apps.length) {
-  firebase.initializeApp({
-    // Your Firebase config object here
-  });
-}
-
 const Profile = () => {
   const [code, setCode] = useState(localStorage.getItem('profileCode') || '');
   const [message, setMessage] = useState('');
-  const [showTaskEditor, setShowTaskEditor] = useState(false); // State to control TaskEditor visibility
-
-  useEffect(() => {
-    // Check if profile code is already saved in localStorage
-    const savedProfileCode = localStorage.getItem('profileCode');
-    if (savedProfileCode) {
-      setCode(savedProfileCode);
-      setShowTaskEditor(true);
-    }
-  }, []);
+  const [showTaskEditor, setShowTaskEditor] = useState(false);
 
   const handleInputChange = (e) => {
     setCode(e.target.value);
   };
 
   const handleCreateProfile = () => {
+    if (!code.trim()) {
+      setMessage('Please enter a profile code.');
+      return;
+    }
+
     const profileRef = firebase.database().ref('profiles').child(code);
 
     profileRef.once('value', (snapshot) => {
@@ -64,6 +54,14 @@ const Profile = () => {
     setMessage('Local storage cleared.');
   };
 
+  useEffect(() => {
+    const savedProfileCode = localStorage.getItem('profileCode');
+    if (savedProfileCode) {
+      setCode(savedProfileCode);
+      setShowTaskEditor(true);
+    }
+  }, []);
+
   return (
     <div>
       <input
@@ -76,7 +74,7 @@ const Profile = () => {
       <button onClick={handleCreateProfile}>Select Profile</button>
       <button onClick={handleClearLocalStorage}>Clear Local Storage</button>
       <div className="message">{message}</div>
-      {showTaskEditor && <TaskEditor profileCode={code} />} {/* Render TaskEditor if showTaskEditor is true */}
+      {showTaskEditor && <TaskEditor profileCode={code} />}
     </div>
   );
 };

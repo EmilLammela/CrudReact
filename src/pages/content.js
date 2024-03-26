@@ -1,9 +1,9 @@
 import React from 'react';
 import '../css/content.css';
 import DataSearch from '../pages/data_search.js';
-import ToDoList from '../pages/to_do_list.js';
 import Profile from '../pages/profile.js';
 import MainContent from './main_content.js';
+import TasksPage from '../pages/tasks.js';
 
 function Content({ updateContent }) {
   const handleButtonClick = (newContent) => {
@@ -33,10 +33,10 @@ function Content({ updateContent }) {
 
         <button className="button" onClick={() => handleButtonClick(
           <div>
-            {<ToDoList />}
+            {<TasksPage />}
           </div>
         )}>
-          To Do List
+          Tasks
         </button>
 
 

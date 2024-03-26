@@ -1,18 +1,26 @@
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  databaseURL: process.env.REACT_APP_FIREBASE_DATABASE_URL,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
 
+  apiKey: "AIzaSyCmtDJhZaq6KUc_MR5tsKbRvkEu_KANOQk",
+  authDomain: "reactcrud-9052d.firebaseapp.com",
+  databaseURL: "https://reactcrud-9052d-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "reactcrud-9052d",
+  storageBucket: "reactcrud-9052d.appspot.com",
+  messagingSenderId: "668274956037",
+  appId: "1:668274956037:web:19f06bc4d0afd92bd1896c",
+  measurementId: "G-RY3L5GE6KY"
 
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <title>Mahtavat verkkosivut</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <script src="/static/js/main.95a35217.js"></script> TÄMÄN POISTIN.
-  </body>
-</html>
+  REACT_APP_FIREBASE_API_KEY=AIzaSyCmtDJhZaq6KUc_MR5tsKbRvkEu_KANOQk
+  REACT_APP_FIREBASE_AUTH_DOMAIN=reactcrud-9052d.firebaseapp.com,
+  REACT_APP_FIREBASE_DATABASE_URL=https://reactcrud-9052d-default-rtdb.europe-west1.firebasedatabase.app
+  REACT_APP_FIREBASE_PROJECT_ID=reactcrud-9052d
+  REACT_APP_FIREBASE_STORAGE_BUCKET=reactcrud-9052d.appspot.com
+  REACT_APP_FIREBASE_MESSAGING_SENDER_ID=668274956037
+  REACT_APP_FIREBASE_APP_ID=1:668274956037:web:19f06bc4d0afd92bd1896c
+  REACT_APP_FIREBASE_MEASUREMENT_ID=G-RY3L5GE6KY
